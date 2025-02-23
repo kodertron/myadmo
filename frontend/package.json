@@ -12,6 +12,7 @@
   "dependencies": {
     "@react-three/fiber": "^9.0.4",
     "@types/three": "^0.173.0",
+    "emoji-picker-react": "^4.12.0",
     "lucide-react": "^0.475.0",
     "motion": "^12.4.7",
     "path": "^0.12.7",
@@ -20,6 +21,7 @@
     "react-layout-masonry": "^1.2.0",
     "react-player": "^2.16.0",
     "react-router-dom": "^7.2.0",
+    "react-use": "^17.6.0",
     "three": "^0.173.0"
   },
   "devDependencies": {
@@ -33,6 +35,7 @@
     "eslint-plugin-react-refresh": "^0.4.18",
     "globals": "^15.14.0",
     "postcss": "^8.5.3",
+    "tailwind-scrollbar": "^3.1.0",
     "tailwindcss": "^3.4.17",
     "typescript": "~5.7.2",
     "typescript-eslint": "^8.22.0",

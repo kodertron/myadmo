@@ -34,7 +34,7 @@ const HorizontalScroller = ({ children }: any) => {
         </div>
 
         {/* video scroller */}
-        <div className="overflow-x-scroll scrollbar-hide" ref={scrollContainerRef}>
+        <div className="overflow-x-scroll scrollbar-none" ref={scrollContainerRef}>
           <div className="w-max flex gap-4 mt-4">
             {children}
             {/* Add more items as needed */}

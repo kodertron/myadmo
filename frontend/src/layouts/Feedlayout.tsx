@@ -57,7 +57,7 @@ const Feedlayout = () => {
     const toggleMenu = () => setMenu(!menu);
   
     return (
-      <div className={`fixed top-0 right-0 ${menu ? "" : "max-[1124px]:-right-[250px]"} transition-all h-screen w-max bg-blue-50 bg-opacity-20 dark:bg-slate-950 dark:text-white duration-300`}>
+      <div className={`fixed top-0 right-0 ${menu ? "" : "max-[1124px]:-right-[250px]"} transition-all h-screen w-max bg-blue-50 bg-opacity-20 dark:bg-slate-900 dark:text-white duration-300`}>
         <div className={`flex`}>
           <div className="w-[250px] h-screen bg-white dark:bg-slate-900 border-r dark:border-slate-800 py-4 relative font-2">
     

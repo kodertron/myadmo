@@ -9,7 +9,13 @@ const App = () => {
       <Route>
         <Route path="/"           element={<Pages.Home  />} />
         <Route element={<Layouts.FeedLayout />}>
-          <Route path="/posts"    element={<Pages.Posts />} />
+          <Route element={<Layouts.PostLayout />}>
+            <Route path="/posts"    element={<Pages.Posts />} />
+            <Route path="/post"     element={<Pages.Post  />} />
+          </Route>
+          <Route path="/live"           element={<Pages.LiveVideos />} />
+          <Route path="/live/group"     element={<Pages.LiveGroup  />} />
+          <Route path="/explore"        element={<Pages.Explore    />} />
         </Route>
       </Route>
     )

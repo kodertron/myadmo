@@ -3,7 +3,7 @@ import ImageGrid from "./ImageGrid";
 import ReactPlayer from "react-player";
 import { Link } from "react-router-dom";
 
-interface PostCardProps {
+interface CommentCardProps {
   user: {
     avatar: string;
     username: string;
@@ -21,9 +21,9 @@ interface PostCardProps {
   };
 }
 
-const PostCard = ({ user, text, images, videoUrl, interactions }: PostCardProps) => {
+const CommentCard = ({ user, text, images, videoUrl, interactions }: CommentCardProps) => {
   return (
-    <div className="post-card bg-white dark:bg-slate-900 dark:border-slate-800 rounded-xl border p-4 mb-4">
+    <div className="post-card  border-t p-4 dark:border-gray-600">
       <div className="top flex justify-between">
         <div className="flex">
           <div className="h-[50px] w-[50px] rounded-full border-blue-500 border-2 overflow-hidden scale-90">
@@ -46,7 +46,7 @@ const PostCard = ({ user, text, images, videoUrl, interactions }: PostCardProps)
       
         <div className="text mt-2 px-2">
             <p className="font-medium">
-            {text}
+              {text}
             </p>
         </div>
       }
@@ -112,4 +112,4 @@ const PostCard = ({ user, text, images, videoUrl, interactions }: PostCardProps)
   );
 };
 
-export default PostCard;
+export default CommentCard;
