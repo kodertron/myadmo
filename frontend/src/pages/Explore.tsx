@@ -1,7 +1,6 @@
-import React from 'react'
 import { HorizontalScroller } from "@/components"
 import { Link } from "react-router-dom"
-import { ArrowLeft, ArrowRight, Eye } from 'lucide-react'
+import { ArrowRight, Eye } from 'lucide-react'
 
 const lives = [
     {
@@ -124,7 +123,7 @@ const Explore = () => {
             </div>
             <div className="grid-300 max-[662px]:grid-cols-2 mt-4">
                 {lives.map( (live, index) => 
-                    <div className=" mb-4 rounded-xl shadow-inner">
+                    <div key={index} className=" mb-4 rounded-xl shadow-inner">
                         <div className="image h-[400px] max-[562px]:h-[230px] overflow-hidden rounded-xl shadow-2xl relative">
                             <img src={live.image} alt="" className="h-full w-full object-cover" />
                             <div className="absolute top-0 left-0 p-3">

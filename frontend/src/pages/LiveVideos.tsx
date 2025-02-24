@@ -1,4 +1,3 @@
-import React from 'react'
 import { HorizontalScroller } from "@/components"
 import { Link } from "react-router-dom"
 
@@ -90,7 +89,7 @@ const LiveVideos = () => {
     <div>
         
         {Array.from({length: 10}).map((_, index) =>
-            <div className="px-3 mb-6">
+            <div key={index} className="px-3 mb-6">
                 <div className="flex items-center justify-between">
                     <h2 className="font-bold text-xl">GAMING & FUN</h2>
 
@@ -99,7 +98,7 @@ const LiveVideos = () => {
                 <div className="">
                     <HorizontalScroller>
                         {lives.map( (live, index) => 
-                            <div className=" mb-4 rounded-xl shadow-inner">
+                            <div key={index} className=" mb-4 rounded-xl shadow-inner">
                                 <div className="image h-[200px] w-[300px] max-[662px]:w-[140px] overflow-hidden rounded-xl shadow-2xl relative">
                                     <img src={live.image} alt="" className="h-full w-full object-cover" />
                                     <div className="absolute top-0 left-0 p-3">

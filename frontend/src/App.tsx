@@ -8,6 +8,8 @@ const App = () => {
     createRoutesFromElements(
       <Route>
         <Route path="/"           element={<Pages.Home  />} />
+      
+        {/* WITH PADDING */}
         <Route element={<Layouts.FeedLayout />}>
           <Route element={<Layouts.PostLayout />}>
             <Route path="/posts"    element={<Pages.Posts />} />
@@ -16,6 +18,11 @@ const App = () => {
           <Route path="/live"           element={<Pages.LiveVideos />} />
           <Route path="/live/group"     element={<Pages.LiveGroup  />} />
           <Route path="/explore"        element={<Pages.Explore    />} />
+        </Route>
+
+        {/* WITHOUT PADDING */}
+        <Route element={<Layouts.FeedLayout padding={false} />}>
+          <Route path="/messages"       element={<Pages.Messages   />} />
         </Route>
       </Route>
     )

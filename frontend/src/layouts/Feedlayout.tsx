@@ -49,7 +49,7 @@ const navs = [
 
 
 
-const Feedlayout = () => {
+const Feedlayout = ({ padding=true } ) => {
     const [menu, setMenu] = useState(true);
     const [theme, setTheme] = useState(localStorage.getItem('theme') || 'light');
     const location = useLocation();
@@ -103,17 +103,19 @@ const Feedlayout = () => {
 
           <div className={` ${menu ? "w-minus-250 max-[1124px]:w-screen" : "w-screen"} relative`}>
               
-            <div className="absolute z-10 top-0 left-0 w-full p-4 py-2  flex items-center justify-between bg-white dark:bg-slate-900 border-b dark:border-slate-800">
+            <div className="h-[50px] absolute z-10 top-0 left-0 w-full p-4 py-2  flex items-center justify-between bg-white dark:bg-slate-900 border-b dark:border-slate-800">
               <div onClick={toggleMenu} className={` transition-all duration-300  right-0 relative `}>
                 <Menu />
               </div>
 
-              <div className=" flex items-center gap-0.5">
+              <div className=" flex items-center gap-0.5 scale-90">
                 <div className="flex text-sm flex-col scale-90" style={{width: "clac(100% - 20px)"}}>
                   <span className="font-bold">
                     {"Adeniyi David Shalom".length > 32 ? `${"Adeniyi David Shalom".substring(0, 32)}...` : "Adeniyi David Shalom"}
                   </span>
-                  <span className="opacity-50 leading-none">@oregon</span>
+                  <span className="opacity-50 leading-none">
+                    @oregon
+                  </span>
                 </div>
                 <div className="h-[40px] w-[40px] rounded-full overflow-hidden">
                   <img src={"/images/avatar-1.jpg"} className="h-full w-full object-cover" />
@@ -121,19 +123,16 @@ const Feedlayout = () => {
               </div>
             </div>
 
-            <div className="h-16"></div>
+            <div className="h-[50px]"></div>
 
             <div className="h-screen overflow-y-scroll w-full">
 
-              <div className="w-full p-3 max-w-[1200px] mx-auto">
+              <div className={`w-full  ${padding && "p-3 max-w-[1200px] mx-auto"}`}>
 
 
                 <Outlet context={{ menu }} />
       
               </div>
-
-              <div className="h-20"></div>
-
 
             </div>
     
